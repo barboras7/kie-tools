@@ -26,7 +26,8 @@ export default class DashbuilderEditorTestHelper extends EditorTestHelper {
   }
 
   public async getDashbuilderRenderedContent(): Promise<WebElement> {
-    const result = await this.webview.findWebElement(By.xpath("//*[@id='mainContainer']"));
+    const result = await this.webview.findWebElement(By.className("uf-perspective-rendered-container"));
+    //const result = await this.webview.findWebElement(By.xpath("//*[@id='mainContainer']"));
     return Promise.resolve(result);
   }
 
