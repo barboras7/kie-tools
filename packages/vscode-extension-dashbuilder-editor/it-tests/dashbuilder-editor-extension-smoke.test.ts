@@ -55,6 +55,10 @@ describe("Dashbuilder editor - smoke integration tests", () => {
 
     // wait for loading of editor
     this.timeout(60000);
+    this.timeout(60000);
+    this.timeout(60000);
+    this.timeout(60000);
+    this.timeout(60000);
     const renderedContent = await dashbuilderEditor.getDashbuilderRenderedContent();
     expect(await renderedContent.isDisplayed()).is.true;
 
