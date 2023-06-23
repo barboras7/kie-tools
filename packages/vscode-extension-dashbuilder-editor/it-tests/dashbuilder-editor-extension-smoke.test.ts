@@ -53,7 +53,7 @@ describe("Dashbuilder editor - smoke integration tests", () => {
     const dashbuilderEditor = new DashbuilderEditorTestHelper(editorWebviews[1]);
     await dashbuilderEditor.switchToEditorFrame();
 
-    // wait for loading
+    // wait for loading of editor
     this.timeout(60000);
     const renderedContent = await dashbuilderEditor.getDashbuilderRenderedContent();
     expect(await renderedContent.isDisplayed()).is.true;
