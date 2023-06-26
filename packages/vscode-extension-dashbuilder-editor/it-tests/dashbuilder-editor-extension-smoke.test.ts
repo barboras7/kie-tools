@@ -60,7 +60,10 @@ describe("Dashbuilder editor - smoke integration tests", () => {
     this.timeout(60000);
     this.timeout(60000);
     const renderedContent = await dashbuilderEditor.getDashbuilderRenderedContent();
-    const returnedValue = await testHelper.takeScreenshotAndSaveForTesting("testovanie", DIST_IT_TESTS_FOLDER);
+    const returnedValue = await testHelper.takeScreenshotAndSaveForTesting(
+      "Dashbuilder editor - smoke integration tests Opens simple-dashbuilder-example.dash.yml and checks its content is rendered",
+      DIST_IT_TESTS_FOLDER
+    );
     expect(await renderedContent.isDisplayed()).is.true;
 
     const renderedContentText = await renderedContent.getText();
