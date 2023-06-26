@@ -390,6 +390,12 @@ export class VSCodeTestHelper {
     fs.writeFileSync(path.join(dirPath, `${sanitize(name)}.png`), data, "base64");
   };
 
+  public takeScreenshotAndSaveForTesting = async (name: string, dirPath: string): Promise<void> => {
+    const data = await this.driver.takeScreenshot();
+    fs.mkdirpSync(dirPath);
+    fs.writeFileSync(path.join(dirPath, `${sanitize(name)}.png`), data, "base64");
+  };
+
   /**
    * Saves the currently open file in the text editor.
    */
